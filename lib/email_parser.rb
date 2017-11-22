@@ -5,14 +5,16 @@
 class EmailParser
   attr_accessor :email
 
- @@all = []
+ email_array = []
 
-  def self.parse
-    emails = email.split(" ")
+  def initialize(emails)
+    @emails = emails
+  end
 
-    emails.each do | e |
-      puts emails
-    end
+  def parse
+    parser_email = emails.split(/[,\s]+/).unique
+    
+  end
 
   end
 
